@@ -1,90 +1,66 @@
-# NTWARISO-BILA-ST10517589-DNM1-WEB-DEVELOPMENT5020-PART-3-POE
-This is the last part of the POE which is Part 3 of adding JavaScript. I also fixed my Part 2 whuch was based on CSS following the feedback I got from my lecturer.
-PAWS & HOPE ANIMAL RESCUE WEBSITE
+# Paws & Hope Animal Rescue — Part 3
 
-1. Project Overview
+## Project overview
+This is a student assessment website for Paws & Hope Animal Rescue. The website contains Home, About Us, Services, Enquiry and Contact pages. The organisation and contact details are for this assessment project; confirm all details with the project owner before using them publicly.
 
-Paws & Hope Animal Rescue is a website developed to provide information about an animal rescue organisation. The main purpose of the website is to create awareness about animal adoption, fostering, volunteering and donations.
+## How to run the website
+1. Extract the ZIP file.
+2. Open the `3. HTML & BASIC CONTENT` folder in Visual Studio Code.
+3. Open `index.html` in a browser or use the Live Server extension.
+4. Keep `style.css`, `js/script.js`, the `images` folder, `robots.txt` and `sitemap.xml` in the same website folder as the HTML pages.
+5. An internet connection is needed for the Leaflet/OpenStreetMap map tiles and for the browser to open an email application. The site still provides an OpenStreetMap fallback link if the map library does not load.
 
-The website allows visitors to learn about the organisation, explore its services, make enquiries and contact the organisation through the available forms.
+## JavaScript features
+- Current year is inserted in the footer.
+- Images with the `gallery-image` class open in a keyboard-accessible lightbox; Escape and the close button dismiss it.
+- Services can be searched and sorted alphabetically or returned to their original order. A live result count and no-results message update with the search.
+- The Services page includes expandable FAQ disclosures using native HTML.
+- The Contact page loads an interactive Leaflet map using OpenStreetMap data. Its marker is an approximate Polokwane city-centre location, not a verified office address.
+- Both forms use HTML constraints and JavaScript validation. The enquiry form displays service-specific guidance; both forms compile validated information into a `mailto:` email draft addressed to `info@pawsandhope.co.za`.
 
-The website was developed using HTML5, CSS3 and JavaScript. Part 3 focuses on improving the website's functionality, user interaction, form validation and Search Engine Optimisation (SEO).
+## Form behaviour and limitation
+The form does not silently store or upload information. After successful validation, the browser asks the visitor's device to open its default email application with a prepared draft. The visitor must review and send the email themselves. If no email application is configured, the draft may not open; the visitor can copy the details and send them manually. A `mailto:` link is not AJAX and does not guarantee delivery. To provide real server-side or AJAX submission, connect a secure form endpoint or a form service and configure it before deployment. The website does not confirm adoption, animal availability, volunteer placement or sponsorship.
 
-2. Website Pages
+## SEO work included
+- Page-specific title tags, meta descriptions and relevant keyword metadata.
+- Semantic heading structure, mobile viewport metadata, descriptive alt text and internal navigation links.
+- Responsive styling and lightweight client-side code.
+- Starter `robots.txt` and `sitemap.xml` files.
 
-The website consists of five main pages:
+### SEO items to finish after deployment
+- Replace relative sitemap locations with full canonical HTTPS URLs.
+- Replace the placeholder sitemap comment in `robots.txt` with the full sitemap URL.
+- Add the published URL to Google Search Console or another webmaster tool.
+- Promote the site through legitimate relevant social channels and seek appropriate backlinks; do not buy spam links.
+- Confirm the organisation's real address, phone number, email and opening hours before public release.
 
-- Home (index.html): Introduces Paws & Hope Animal Rescue and provides an overview of the organisation.
-- About Us (about.html): Provides information about the organisation and its purpose.
-- Services (services.html): Displays the services offered, including adoption, fostering, volunteering and other support activities.
-- Enquiry (enquiry.html): Allows visitors to submit enquiries about the services offered.
-- Contact (contact.html): Provides a contact form and an interactive map.
+## Part 2 feedback addressed
+- Standardised the header and navigation across pages and repaired the missing About Us page.
+- Standardised the footer links and dynamic copyright year.
+- Corrected invalid CSS custom-property references while retaining the cream/orange/dark colour direction.
 
-3. Technologies Used
+## Testing checklist
+- [ ] Open all five pages and check all navigation/footer links.
+- [ ] Open an image with mouse and keyboard; close with Escape and the close button.
+- [ ] Search services, search for a word with no results, and test both sort options.
+- [ ] Expand and collapse the FAQs.
+- [ ] Submit each form with empty fields, malformed email, invalid phone (enquiry), short message and valid details.
+- [ ] Confirm a valid form opens a draft email with the expected fields and recipient. Do not assume it was sent until you send it in the email application.
+- [ ] Test the map while connected to the internet and use the fallback link if needed.
+- [ ] Test the layout on mobile and desktop widths.
+- [ ] After deployment, update sitemap/robots with the real URL and verify every deployed page.
 
-The following technologies were used to develop the website:
+## GitHub and deployment actions still required
+The files in this ZIP are not proof of GitHub commits, a pushed repository or a published website. In your own GitHub account, commit changes using descriptive messages (for example, `Add service search and sorting`, `Validate forms and prepare email drafts`, `Add interactive map and SEO metadata`), push the commits, deploy the site using a free static host, and add the real repository/deployment links to your submission.
 
-- HTML5: Used to create the structure and content of the website.
-- CSS3: Used to style the website, including its layout, colours, navigation, header and footer.
-- JavaScript: Used to add interactive features and improve website functionality.
-- Leaflet: Used to create the interactive map.
-- OpenStreetMap: Used as the map data and tile provider.
-- Visual Studio Code: Used as the code editor.
-- GitHub: Used for source-code management and project submission.
+## Changelog
+See `CHANGELOG_PART3.md` for a detailed record of changes and tests.
 
-4. JavaScript Functionality
-
-For Part 3, the original combined JavaScript code was organised into six separate files inside the "js" folder. This makes the code easier to understand, maintain and manage.
-
-4.1 main.js
-
-This file manages general website functionality. It includes the automatic copyright year displayed in the footer.
-
-4.2 contact.js
-
-This file handles the contact form validation. It checks the information entered by visitors and prepares an email draft after successful validation.
-
-4.3 enquiry.js
-
-This file handles the enquiry form. It checks required information, validates the phone number and provides guidance based on the type of enquiry selected.
-
-4.4 lightbox.js
-
-This file provides an interactive image lightbox. Visitors can open larger image previews and close them using the close button, clicking outside the image or pressing the Escape key.
-
-4.5 map.js
-
-This file controls the interactive map on the Contact page using the Leaflet JavaScript library and OpenStreetMap.
-
-4.6 products.js
-
-This file provides service searching and filtering functionality. Visitors can search for services, view the number of matching results and sort the services alphabetically from A–Z or Z–A.
-
-5. Search Engine Optimisation (SEO)
-
-SEO improvements were included to help search engines understand the website's content.
-
-The following improvements were made:
-
-- Added page-specific title tags.
-- Added meta descriptions and relevant keywords.
-- Improved the heading structure.
-- Added alternative text (alt text) to images.
-- Improved internal navigation links.
-- Included mobile viewport settings.
-- Added a "robots.txt" file.
-- Added a "sitemap.xml" file.
-
-The sitemap and robots file must be updated with the actual published website URL after deployment.
-
-6. Form Validation
-
-The website contains two forms with different purposes.
-
-Enquiry Form:
-Allows visitors to enquire about adoption, fostering, volunteering and sponsorship opportunities.
-
-Contact Form:
-Allows visitors to send general questions or messages to the organisation.
-
-JavaScript validation checks the information entered into the forms and provides feedback when information is missing or invalid.
+## References
+- Google Search Central. (n.d.). *SEO Starter Guide*. https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed 28 October 2026).
+- Leaflet. (n.d.). *Leaflet — an open-source JavaScript library for interactive maps*. https://leafletjs.com/ (Accessed 28 October 2026).
+- MDN Web Docs. (n.d.). *Constraint validation*. https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation (Accessed 28 October 2026).
+- MDN Web Docs. (n.d.). *HTML forms guide*. https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms (Accessed 28 October 2026).
+- MDN Web Docs. (n.d.). *Document Object Model (DOM)*. https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model (Accessed 28 October 2026).
+- OpenStreetMap contributors. (n.d.). *Copyright and licence*. https://www.openstreetmap.org/copyright (Accessed 28 October 2026).
+- Sitemaps.org. (n.d.). *Sitemaps XML format*. https://www.sitemaps.org/protocol.html (Accessed 28 October 2026).

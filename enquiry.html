@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Paws &amp; Hope Animal Rescue website">
+<title>Enquiry | Paws &amp; Hope Animal Rescue</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <a href="index.html" aria-label="Paws &amp; Hope home"><img class="logo" src="images/logo.svg" alt="Paws &amp; Hope Animal Rescue logo"></a>
+    <div><h1>Paws &amp; Hope Animal Rescue</h1><p>Rescue, care and hope for animals in need.</p></div>
+  </div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html" >About Us</a></li>
+      <li><a href="services.html" >Services</a></li>
+      <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section><h2>Make an Enquiry</h2><img class="page-image" src="images/adopt-realistic.jpg" alt="Animal waiting for a loving home"><p>Complete this form to enquire about adoption, fostering, volunteering or sponsorship.</p><form id="enquiryForm"><label for="fullName">Full Name</label><input type="text" id="fullName" name="fullName" required><label for="email">Email Address</label><input type="email" id="email" name="email" required><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"><label for="enquiryType">Enquiry Type</label><select id="enquiryType" name="enquiryType" required><option value="">-- Select an option --</option><option>Adoption</option><option>Fostering</option><option>Volunteering</option><option>Sponsorship</option></select><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea><button type="submit">Submit Enquiry</button><p id="formMessage" aria-live="polite"></p></form></section>
+</main>
+<footer>
+  <p>&copy; <span id="year"></span> Paws &amp; Hope Animal Rescue. Assessment project.</p>
+  <p><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="services.html">Services</a> | <a href="enquiry.html">Enquiry</a> | <a href="contact.html">Contact</a></p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

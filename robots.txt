@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace the placeholder below with the full sitemap URL after deployment.
+# Sitemap: https://YOUR-PUBLISHED-DOMAIN/sitemap.xml
